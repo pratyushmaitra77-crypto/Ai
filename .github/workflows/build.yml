@@ -10,6 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify files
+        run: |
+          echo "=== Files in repo ==="
+          ls -la
+          echo "=== Checking buildozer.spec ==="
+          if [ -f "buildozer.spec" ]; then
+            echo "✅ buildozer.spec FOUND"
+            head -5 buildozer.spec
+          else
+            echo "❌ buildozer.spec NOT FOUND"
+            exit 1
+          fi
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
