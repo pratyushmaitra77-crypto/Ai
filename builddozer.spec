@@ -8,7 +8,7 @@ version = 1.0
 requirements = python3,kivy==2.3.0,requests,urllib3,chardet,idna,certifi,pyjnius,android
 orientation = portrait
 fullscreen = 0
-android.permissions = INTERNET,RECORD_AUDIO,ACCESS_NETWORK_STATE
+android.permissions = INTERNET,RECORD_ACCESS_NETWORK_STATE
 android.api = 33
 android.minapi = 24
 android.archs = arm64-v8a
